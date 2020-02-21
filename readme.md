@@ -1,16 +1,17 @@
-Шаблон для верстки gulp + webpack.
-
+## Шаблон для верстки gulp + webpack.
+```
 	webpack - сборка JavaScript
 	gulp 		- сборка всего остального.
 	Весь JavaScript прогоняется через Babel
-
-npm модули:
+```
+## Npm модули:
+```
 	cleave.js - валидация форм 
 	swiper		- слайдер Swiper Slider
 	jquery		- jquery v3.4.1			
-
-Структура проекта:
-
+```
+## Структура проекта:
+```
 /dist - Продакшен 
 /src 	- Исходники	
 		/favicon
@@ -30,4 +31,4 @@ npm модули:
 			_reset.scss 	- сброс дефолтных стилей браузера
 			_style.scss 	- основной файл стилей
 			_vars.scss 		- переменные
-
+```
