@@ -1,0 +1,24 @@
+
+$grid-breakpoints: (
+        xs: 0,
+        xxs: 465px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1500px
+
+) !default;
+
+
+$mainFontSize: 16px;
+
+// css-переменные для раскраски svg-иконок
+:root {
+  --victory-text: #000;
+  --logocontur1 : #000;
+  --logocontur2 : red;
+  --icon: #fff;
+  --text: #000;
+  --circle: #{....};
+}

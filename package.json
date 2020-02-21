@@ -1,0 +1,35 @@
+{
+  "name": "VictoryLanding",
+  "version": "1.0.0",
+  "description": "Victory Landing Gulp + Webpack",
+  "main": "gulpfile.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cleave.js": "^1.5.3",
+    "swiper": "^5.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.3",
+    "del": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cache": "^1.1.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "jquery": "^3.4.1",
+    "webpack": "^4.41.6",
+    "webpack-stream": "^5.2.1"
+  }
+}

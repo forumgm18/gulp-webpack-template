@@ -1,0 +1,85 @@
+@import "vars";
+/* Mixins:
+   ========================================================================== */
+
+// px to rem
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1rem;
+}
+
+// size to one line
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+// min-size to one line
+@mixin min-size($width, $height: $width) {
+  min-width: $width;
+  min-height: $height;
+}
+// max-size to one line
+@mixin max-size($width, $height: $width) {
+  max-width: $width;
+  max-height: $height;
+}
+
+// placeholder helper
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+
+@mixin media-min-width($name, $breakpoints: $grid-breakpoints) {
+  //$min: breakpoint-min($name, $breakpoints);
+  $min: map-get($breakpoints, $name);
+
+  @if $min != 0 {
+    @media screen and (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+//Миксин для display: flex;
+@mixin dFlex($js : flex-start, $ai : flex-start, $fd : row , $fw: nowrap) {
+  display: flex;
+  justify-content: $js;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+//Миксин для Шрифта
+@mixin setFont ($ff, $fz, $fc, $fs : normal, $fw : normal, $lh: normal) {
+  font-family: $ff;
+  font-style: $fs;
+  font-weight: $fw;
+  font-size: rem($fz);
+  //line-height: rem($lh);
+  line-height: $lh;
+  color: $fc;
+}
